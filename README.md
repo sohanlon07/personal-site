@@ -4,7 +4,12 @@ This is my personal site, built with [Astro](https://astro.build/).
 
 The site is based on the [Codefolio theme](https://github.com/danielunited/codefolio) for Astro.
 
-## Repository Layout
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+The licenses for third-party software used in this project can be found in the `licenses` directory.
+
 
 - `src/`: This directory contains all of the site's source code.
   - `components/`: Reusable Astro components.

@@ -1,23 +1,16 @@
-# Codefolio
-An open-source portfolio for devs to showcase their projects, coding skills and perosnal story.
+# Personal Site
 
-## Quick Start
+This is my personal site, built with [Astro](https://astro.build/).
 
-```bash
-npm create astro@latest -- --template danielunited/codefolio
+The site is based on the [Codefolio theme](https://github.com/danielunited/codefolio) for Astro.
 
-# Follow the interactive prompts to create the project
+## Repository Layout
 
-cd <your-project-name>
-npm run dev     # Will start the local development server at http://localhost:4321 by default
-
-```
-
-## Deployment
-The current branch can be fully static built and deployed on any static hosting platform.
-
-For deployment methods on various platforms, refer to the [Astro Official Deployment Guide](https://docs.astro.build/en/guides/deploy/).
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
+- `src/`: This directory contains all of the site's source code.
+  - `components/`: Reusable Astro components.
+  - `layouts/`: The basic site layout.
+  - `pages/`: The pages of the site.
+  - `scripts/`: Client-side JavaScript.
+- `public/`: This directory contains all static assets, such as images and CSS files.
+- `astro.config.mjs`: The Astro configuration file.
+- `package.json`: The project dependencies.

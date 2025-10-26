@@ -1,0 +1,135 @@
+---
+import Header from "../components/Header.astro";
+import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
+const projects = [
+  {
+    title: "Bazaarvoice",
+    desc: [
+      "Lead migration of Artifact Management to Cloudsmith.",
+      "Deliver Internal Developer Portal and scaffolding templates using Backstage.",
+      "Build and deploy company-wide EKS platforms.",
+      "Maintain and support legacy CI/CD systems (Jenkins, Nexus).",
+      "Lead migration of CI/CD pipelines to GitHub Actions.",
+      "Implement custom observability stack with OpenTelemetry, Logz.io, and Datadog.",
+    ],
+    tech: [
+      "AWS",
+      "Terraform",
+      "Kubernetes",
+      "Helm",
+      "GitHub Actions",
+      "OpenTelemetry",
+      "Jenkins",
+      "Datadog",
+      "Logz.io",
+      "Python",
+      "Bash",
+      "Cloudsmith",
+    ],
+  },
+  {
+    title: "Synechron",
+    desc: [
+      "Cloud and DevOps consulting for London Stock Exchange.",
+      "Implement cloud infrastructure using Terraform.",
+      "Develop Internal Developer Portals using Backstage.",
+      "Design and implement a fully automated software and dependency distribution system on AWS with Artifactory Pro.",
+      "Automated creation of secure Ubuntu Desktops using AWS Workspaces, Terraform, Ansible, and Python.",
+    ],
+    tech: [
+      "AWS",
+      "Terraform",
+      "Ansible",
+      "Python",
+      "GitLab CICD",
+      "Artifactory Pro",
+    ],
+  },
+  {
+    title: "Aflac Northern Ireland",
+    desc: [
+      "Define company-wide DevOps and DevSecOps strategy.",
+      "Create and optimize CI/CD pipelines.",
+      "Manage AWS infrastructure for the DevOps Platform using CloudFormation and Terraform.",
+      "Collaborate with the Cloud Team on Aflac’s cloud migration to AWS.",
+      "Design CI/CD and Infrastructure as Code templates for custom Developer Experience Platform.",
+    ],
+    tech: [
+      "AWS",
+      "Terraform",
+      "Cloud Formation",
+      "Azure DevOps",
+      "Python",
+      "Bash",
+      "GitLab CICD",
+      "Artifactory Pro",
+    ],
+  },
+  {
+    title: "Allstate Northern Ireland",
+    desc: [
+      "Lead implementation of the DevOps model at Allstate.",
+      "Implement and maintain CI/CD toolsets; GitHub Enterprise Server, Jenkins, Artifactory, Octopus Deploy, SonarQube, and Docker.",
+      "Architect and deploy infrastructure on Red Hat Linux, Windows, and macOS.",
+      "Design and build CI/CD pipelines to automate deployments to AWS and Pivotal Cloud Foundry.",
+      "Implement ServiceNow Discovery to automate CMDB population.",
+      "Implement Flexera Software Asset Management for automated license management.",
+      "Implement ustom platform integration solutions using Java.",
+    ],
+    tech: [
+      "AWS",
+      "Java",
+      "Python",
+      "Bash",
+      "Jenkins",
+      "Artifactory Pro",
+      "ServiceNow",
+      "Flexera",
+    ],
+  },
+];
+---
+
+<!doctype html>
+<html>
+  <Header title="Career | Shane O'Hanlon" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="career-projects" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/" class="back-nav-button w-inline-block"
+              ><img
+                src="/assets/back.svg"
+                loading="lazy"
+                alt=""
+                class="back-nav-img"
+              />
+              <div>Back</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Career</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+                {
+                  projects.map((project) => (
+                    <Project
+                      title={project.title}
+                      desc={project.desc}
+                      tech={project.tech}
+                    />
+                  ))
+                }
+              </div>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
